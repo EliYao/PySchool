@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+		<title>私学堂 - 登录</title>
+		<link rel="stylesheet" href="{% static 'school/styles/login.css' %}"></link>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="{% static 'school/images/favicon32.ico' %}" type="image/x-icon" />
+		<script type="text/javascript" src="{% static 'school/scripts/jquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'school/scripts/login.js' %}"></script>
+</head>
+<body>
+	<div class="header">
+		<img src="{% static 'school/images/logo.jpg' %}" />
+	</div>
+	<div id="content">
+		<div class="login">
+			<div class="LeftPic">
+				<img src="{% static 'school/images/loginBanner.jpg' %}" />
+			</div>
+			<div class="Reg">
+				<div class="SignIn">
+					<p>登录</p><br />
+                    <form id="login_form" method="post" action="/school/index/">
+                        {% csrf_token %}
+                        <input required class="signInput" type="text" name="email" placeholder="请输入邮箱" /><br />
+                        <input required class="signInput" type="password" name="password" placeholder="请输入密码" />
+                        <br />
+                        <div class="floatL"><input class="rememberPassword" type="checkbox" /><label for="cr" >记住密码</label>
+                        </div>
+                        <div class="floatR"><a class="js-resetpassword" href="#">忘记密码</a></div>
+                        <br />
+                        <div class="floatL">
+                        <button class="signIcon" type="submit">登录</button>
+                    </form>
+					</div>
+					<div class="floatR">没有帐号？<a href="{% url 'signup' %}">立即注册</a></div>
+				</div>
+			</div>
+		</div>
+		<div id="downImages">
+			<img src="{% static 'school/images/loginBig.jpg' %}" />
+		</div>
+	</div>
+	<div class="footer">
+		<p class="footText">© 2015 私学堂 sixuetang.com 版权所有</p>
+	</div>
+</body>
+</html>

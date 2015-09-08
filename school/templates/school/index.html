@@ -1,0 +1,123 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+		<title>私学堂 - 主页</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="{% static 'school/images/favicon32.ico' %}" type="image/x-icon" >
+		<link rel="stylesheet" href="{% static 'school/styles/index.css' %}" >
+		<link href="{% static 'school/styles/font-awesome.css' %}" rel="stylesheet">
+		<link href="{% static 'school/styles/font-awesome.min.css' %}" rel="stylesheet">
+		<script type="text/javascript" src="{% static 'school/scripts/jquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'school/scripts/login.js' %}"></script>
+</head>
+<body>
+    <div class="header">
+            <div class="logo"><img src="{% static 'school/images/logo_02.png' %}" /></div>
+            <div class="search"><input type="text" placeholder="搜索你想要学习的内容" /><div class="searchIcon fa fa-search fa-2x"></div></div>
+            <div class="profile"><img src="{% static 'school/images/userPic.png' %}" /></div>
+    </div>
+	<div id="content">
+		<div class="mainImgs">
+				<img src="{% static 'school/images/indexBig01.png' %}" />
+		</div>
+		<div id="downImages">
+			<img src="{% static 'school/images/indexDown.Png' %}" />
+		</div>
+		<div id="courseRe">
+			<div id="courseReL">
+				<div id="content-Course-Re-Left">
+					<h1 class="index-h1">优秀课程推荐</h1>
+					<ul>
+						<li>算法导论</li>
+						<li>编译原理</li>
+						<li>数据结构</li>
+						<li>离散数学</li>
+						<li>数据库原理</li>
+						<li>网页设计与制作</li>
+						<li>JavaScript 程序设计</li>
+					</ul>
+				</div>
+                    <div class="index-arrow">
+                    </div>
+			</div>
+			<div id="courseReR">
+				<div class="contentReR">
+				
+				</div>
+				<div class="contentReR">
+				
+				</div>
+				<div class="contentReR">
+				
+				</div>
+				<div class="contentReR">
+				
+				</div>
+				<div class="contentReR">
+				
+				</div>
+				<div class="contentReR">
+				
+				</div>
+			</div>
+		</div>
+        <div class="bgWhite">
+		<div id="courseFolderRe">
+            <div id="course-Folder-ReL">
+                <div id="course-Folder-Re-Left">
+                    <h1 class="index-h1">课程夹推荐</h1>
+                    <ul>
+                            <li>前端工程师</li>
+                            <li>交互设计师</li>
+                            <li>UI 设计师</li>
+                            <li>程序猿</li>
+                            <li>字体设计师</li>
+                            <li>摄影师</li>
+                            <li>架构师</li>
+                        </ul>
+                </div>
+                 <div class="index-arrow">
+                </div>
+            </div>
+			<div id="courseFolderReR">
+                <div class="course-Folder-Re-item">
+                </div>
+			</div>
+		</div>
+		<div id="createrFolder">
+			<div id="clickBtn">
+				<input id="createrBtn" type="submit" value="创建课程夹" />
+			</div>
+            </div>
+         </div>
+	</div>
+	<div class="footer">
+		<p class="footText">© 2015 私学堂 sixuetang.com 版权所有</p>
+	</div>
+    <a id="gotop">
+ 
+<img src="{% static 'school/images/jump.png' %}">
+</a>
+<script type="text/javascript">
+
+$(function(){
+    $("#gotop").hide();
+});
+$(function(){
+    $(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
+        var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+        if( scrollt >200 ){  //判断滚动后高度超过200px,就显示  
+            $("#gotop").fadeIn(400); //淡出     
+        }else{      
+            $("#gotop").stop().fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动   
+        }
+    });
+    $("#gotop").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部
+            $("html,body").animate({scrollTop:"0px"},200);
+    });
+});
+</script>
+</body>
+</html>

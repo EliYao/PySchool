@@ -1,0 +1,20 @@
+{% extends 'rango/base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}index{% endblock %}
+
+{% block body_block %}
+
+        {% if categories %}
+            <ul>
+                {% for category in categories %}
+                <li>
+                <a href="{% url 'category'  category.slug %}">{{ category.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+{% endblock %} 

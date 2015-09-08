@@ -1,0 +1,87 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+		<title>私学堂 - 登录</title>
+		<link rel="stylesheet" href="{% static 'school/styles/login.css' %}"></link>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="{% static 'school/images/favicon32.ico' %}" type="image/x-icon" />
+		<script type="text/javascript" src="{% static 'school/scripts/jquery.js' %}"></script>
+		<script type="text/javascript" src="{% static 'school/scripts/login.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'school/scripts/jquery-ui.css' %}">
+        <script src="{% static 'school/scripts/jquery.js' %}"></script>
+        <script src="{% static 'school/scripts/jquery-ui.js' %}"></script>
+        <head>
+</head>
+<body>
+
+
+</head>
+<body>
+	<div class="header">
+		<img src="{% static 'school/images/logo.jpg' %}" />
+	</div>
+	<div id="content">
+		<div class="login">
+			<div class="LeftPic">
+				<img src="{% static 'school/images/loginBanner.jpg' %}" />
+			</div>
+			<div class="Reg">
+				<div class="SignIn">
+					<h3>注册</h2><br />
+					<input  class="signInput autocomplete" type="text" name="search" placeholder="请输入邮箱" /><br />
+					<input  class="signInput" type="password" name="search" placeholder="请输入密码" />
+					<br />
+					<input class="signInput" type="text" name="search" placeholder="请输入昵称" />
+					<br />
+					<div class="floatL2"><input class="rememberPassword" type="checkbox" /><label for="cr" >我已认真阅读并同意<a href="#">《注册协议》</a></label>
+					</div>
+					<br />
+					<div class="floatL">
+					<input class="signIcon" type="submit" name="submit" value="注册" />
+					</div>
+					<div class="floatR">已有帐号？<a id="signIn" href="{% url 'login' %}">立即登录</a></div>
+				</div>
+			</div>
+		</div>
+		<div id="downImages">
+			<img src="{% static 'school/images/loginBig.jpg' %}" />
+		</div>
+	</div>
+	<div class="footer">
+		<p class="footText">© 2015 私学堂 sixuetang.com 版权所有</p>
+	</div>
+<script>
+$(function() {
+    var availableTags = [
+      "@163.com",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( ".autocomplete" ).autocomplete({
+      source: availableTags
+    });
+  });
+</script>
+</body>
+</html>
