@@ -1,0 +1,184 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+		<title>私学堂 - 课程详情</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="{% static 'school/images/favicon32.ico' %}" type="image/x-icon" >
+		<link rel="stylesheet" href="{% static 'school/styles/common.css' %}" >
+    <link rel="stylesheet" href="{% static 'school/styles/lessonDetails.css' %}" >
+		<link href="{% static 'school/styles/font-awesome.css' %}" rel="stylesheet">
+		<link href="{% static 'school/styles/font-awesome.min.css' %}" rel="stylesheet">
+		<script type="text/javascript" src="{% static 'school/scripts/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'school/scripts/common.js' %}"></script>
+</head>
+<body>
+	<div class="header">
+        <div class="logo">
+            <a href="/school/index/"><img src="{% static 'school/images/logo_02.png' %}" /></a>
+            <div class="header-a"><a href="/school/index/">首页</a></div>
+            <div class="header-a"><a href="/folder/">课程夹</a></div>
+            <div class="header-a"><a href="/course/">课程</a></div>
+        </div>
+        <div class="search"><input type="text" placeholder="搜索你想要学习的内容" />
+        <div class="searchIcon fa fa-search fa-2x"></div></div>
+        <div class="profile">
+        <a id="profile" href="#"><img src="{% static 'school/images/userPic.png' %}" /></a>
+        <ul class="UI-nav">
+            <li class="UI-nav-item-down">
+            <a href="#">
+            <img src="{% static 'school/images/navUser.png' %}" />&nbsp;&nbsp;个人中心
+            </a>
+            </li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navFolder.png' %}" />&nbsp;&nbsp;我的课程夹</a></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navNote.png' %}" />&nbsp;&nbsp;我的笔记</a></li>
+            <li class="navLine"><img src="{% static 'school/images/navLine.png' %}" /></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navSetting.png' %}" />&nbsp;&nbsp;帐号设置</a></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navExit.png' %}" />&nbsp;&nbsp;退出</a></li>
+        </ul>
+        </div>
+	</div>
+    <div class="content">
+        <div class="content-top">
+              <img src="{% static 'school/images/Compilers_principles.png' %}" />
+              <div class="content-top-title">
+              数据库原理
+              <ul>
+                <li>作者：某某某</li>
+                <li>语言：英语</li>
+                <li>课时：24 课时</li>
+                <li>评价：</li>
+              </ul>
+              </div>
+              <div class="content-top-describe">
+                课程介绍：
+                <p>
+                数据库原理想数据库原理数据库原理,事实上 说三道四的的速度哈克里斯蒂哈看似繁华都市繁华的思考和解的空间才能在项目才能奏效，摩擦可角的哈萨克记得很久 。 
+                </p>
+              </div>
+              <div class="content-top-right">
+                <img src="{% static 'school/images/add_Box_add.png' %}" />
+                <button>开始学习</button>
+              </div>
+         </div>
+        <div class="content-center">
+             <div class="content-list">
+             <div class="content-hover-arrow">
+             <img src="{% static 'school/images/arrowLessonLeft.png' %}" />
+             </div>
+               <h3>课时列表</h3>
+               <ul class="content-list-item">
+                <li class="content-list-items">
+                      <img src="{% static 'school/images/Compilers_principles.png' %}" />
+                      <div class="content-list-item-name-bg"></div>
+                      <div class="content-list-item-name">编译原理</div>
+                </li>
+                <li class="content-list-items">
+                      <img src="{% static 'school/images/Compilers_principles.png' %}" />
+                      <div class="content-list-item-name-bg"></div>
+                      <div class="content-list-item-name">编译原理</div>
+                </li>
+                <li class="content-list-items">
+                      <img src="{% static 'school/images/Compilers_principles.png' %}" />
+                      <div class="content-list-item-name-bg"></div>
+                      <div class="content-list-item-name">编译原理</div>
+                </li>
+                <li class="content-list-items">
+                      <img src="{% static 'school/images/Compilers_principles.png' %}" />
+                      <div class="content-list-item-name-bg"></div>
+                      <div class="content-list-item-name">编译原理</div>
+                </li>
+                <li class="content-list-items">
+                      <img src="{% static 'school/images/Compilers_principles.png' %}" />
+                      <div class="content-list-item-name-bg"></div>
+                      <div class="content-list-item-name">编译原理</div>
+                </li>
+                <li class="content-list-items">
+                      <img src="{% static 'school/images/Compilers_principles.png' %}" />
+                      <div class="content-list-item-name-bg"></div>
+                      <div class="content-list-item-name">编译原理</div>
+                </li>
+               </ul>
+             <div class="content-hover-arrow-right">
+               <img src="{% static 'school/images/arrowLessonright.png' %}" />
+             </div>
+             </div>
+        </div>
+   
+        <div class="content-down">
+          <div class="content-allcomments">
+          <h3>
+          所有评论（16）
+          </h3>
+          <ul>
+            <li class="comments">
+            <img src="{% static 'school/images/Compilers_principles.png' %}" /> 
+            <div class="comments-detail ">
+            <h4>路人甲</h4>
+            <div class="comments-time">
+            2015-06-21 19:27:47
+            </div>
+            <p>哈哈哈哈哈哈哈哈哈哈哈哈哈啊哈。哈哈哈哈哈啊哈哈哈哈哈 哈，哈哈哈哈哈。啊哈哈哈哈哈哈哈哈哈哈哈哈，哈哈哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈。</p>
+            </div>
+            </li>
+            <li class="comments">
+            <img src="{% static 'school/images/Compilers_principles.png' %}" /> 
+            <div class="comments-detail ">
+            <h4>路人甲</h4>
+             <div class="comments-time">
+            2015-06-21 19:27:47
+            </div>
+            <p>哈哈哈哈哈哈哈哈哈哈哈哈哈啊哈。哈哈哈哈哈啊哈哈哈哈哈 哈，哈哈哈哈哈。啊哈哈哈哈哈哈哈哈哈哈哈哈，哈哈哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈。</p>
+            </div>
+            </li>
+            <li class="comments comments-click">
+                <img src="{% static 'school/images/Compilers_principles.png' %}" /> 
+                <div class="comments-detail ">
+                <h4>路人甲</h4>
+                <div class="comments-time">
+                2015-06-21 19:27:47
+                </div>
+                <p>哈哈哈哈哈哈哈哈哈哈哈哈哈啊哈。哈哈哈哈哈啊哈哈哈哈哈 哈，哈哈哈哈哈。啊哈哈哈哈哈哈哈哈哈哈哈哈，哈哈哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈。</p>
+                </div>
+            </li>
+          </ul>
+          </div>
+          <div class="linkedFolder">
+          <h3>
+          相关课程夹：
+          </h3>
+          <div class="UI-folder-box">
+             <a href="/school/profileFolderDetails/">
+                 <div class="UI-folder-title">前端工程师</div>
+                 <div class="UI-folder-img">
+                  <img src="{% static 'school/images/profile_sample_image.png' %}" />
+                 </div>
+                 <div class="UI-folder-empty"></div>
+                 <div class="UI-folder-empty"></div>
+              </a>
+           </div>
+          </div>
+        </div>
+   
+        <div class="add-comment">
+        <h3>添加评论</h3>
+        <img class="round" src="{% static 'school/images/Compilers_principles.png' %}" /> 
+        <div class="add-comment-detail">
+            <h4>路人甲</h4>
+            <textarea>
+            
+            </textarea>
+            <button>
+            发表
+            </button>
+        </div>
+   </div>
+    <div class="footer">
+		<p class="footText">© 2015 私学堂 sixuetang.com 版权所有</p>
+	</div>
+    <a id="gotop">
+        <img src="{% static 'school/images/jump.png' %}">
+    </a>
+</body>
+</html>

@@ -211,6 +211,11 @@ UI-nav-item-down, UI-nav-item-down img{
     background-image: url(../images/UI-folder-editor.png);
 }
 
+.UI-folder-box a{
+  text-decoration: none;
+  color: #434343;
+}
+
 .UI-add-box a, .UI-folder-editor a{
     text-decoration: none;
     color: #434343;

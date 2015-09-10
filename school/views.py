@@ -60,7 +60,12 @@ def createLessonText(request):
     
     return render(request, 'school/createLessonText.html')
 
-   
+def lessonDetails(request):
+    
+    return render(request, 'school/lessonDetails.html')
+
+
+    
 def user_login(request):
     if request.method == 'POST':
         email = request.POST.get('email')
