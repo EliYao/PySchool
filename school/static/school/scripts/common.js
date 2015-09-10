@@ -1,12 +1,11 @@
-$(document).ready(function () {
-    $(".UI-nav").hide();
-        $("#profile").hover(function () {
-               $(".UI-nav").slideDown(500);
-            },function () {
-            $(".UI-nav").slideUp(500);
-        });
-});
-
+//导航效果（兼容IE6）
+$(function(){
+	   $(".profile").hover(function(){
+			$(this).children("ul").stop(true,true).slideDown(400);
+        },function(){
+		    $(this).children("ul").stop(true,true).slideUp("fast");
+		});
+})
 $(function(){
     $("#gotop").hide();
 });
