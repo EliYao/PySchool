@@ -1,0 +1,95 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+		<title>私学堂 - 个人中心 - 课程夹</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="{% static 'school/images/favicon32.ico' %}" type="image/x-icon" >
+		<link rel="stylesheet" href="{% static 'school/styles/common.css' %}" >
+    <link rel="stylesheet" href="{% static 'school/styles/profile.css' %}" >
+		<link href="{% static 'school/styles/font-awesome.cs' %}s" rel="stylesheet">
+		<link href="{% static 'school/styles/font-awesome.min.css' %}" rel="stylesheet">
+		<script type="text/javascript" src="{% static 'school/scripts/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'school/scripts/common.js' %}"></script>
+</head>
+<body>
+	<div class="header">
+        <div class="logo">
+            <a href="/school/index/"><img src="{% static 'school/images/logo_02.png' %}" /></a>
+            <div class="header-a"><a href="/school/index/">首页</a></div>
+            <div class="header-a"><a href="/folder/">课程夹</a></div>
+            <div class="header-a"><a href="/course/">课程</a></div>
+        </div>
+        <div class="search"><input type="text" placeholder="搜索你想要学习的内容" /><div class="searchIcon fa fa-search fa-2x"></div></div>
+        <div class="profile">
+        <a id="profile" href="#"><img src="{% static 'school/images/userPic.png' %}" /></a>
+        <ul class="UI-nav">
+            <li class="UI-nav-item-down"><a href="/school/profileCenter/"><img src="{% static 'school/images/navUser.png' %}" />&nbsp;&nbsp;个人中心</a></li>
+            <li class="navLine"><img src="{% static 'school/images/navLine.png' %}" /></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navFolder.png' %}" />&nbsp;&nbsp;我的课程夹</a></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navNote.png' %}" />&nbsp;&nbsp;我的笔记</a></li>
+            <li class="navLine"><img src="{% static 'school/images/navLine.png' %}" /></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navSetting.png' %}" />&nbsp;&nbsp;帐号设置</a></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navExit.png' %}" />&nbsp;&nbsp;退出</a></li>
+        </ul>
+        </div>
+	</div>
+    <div class="content">
+        <div class="content-top">
+            <div class="center-profile-icon">
+            <img src="{% static 'school/images/sample_proflie_icon.png' %}" />
+            </div> 
+            <div class="center-profile-name">YU JIA JIA</div>
+            <div class="profile-nav">
+                    <div class="profile-nav-item unactive">
+                        <a href="/school/profileCenter/"><img src="{% static 'school/images/navUser.png' %}" /><br />
+                        <span>个人中心</span>
+                        </a>
+                    </div>
+                     <div class="profile-nav-item active">
+                        <a href="/school/profileFolder/">3<br />
+                        <span>课程夹</span>
+                        </a>
+                    </div>
+                     <div class="profile-nav-item unactive">
+                       <a href="/school/profileCollect/">
+                          35<br />
+                        <span>课程收藏</span>
+                        </a>
+                    </div>         
+            </div>
+        </div>
+        <div class="content-down">
+             <div class="add-folder"> 
+                <div class="UI-add-box">
+                    <a href="/school/addFolder/"><img src="{% static 'school/images/add_Box_add.png' %}" />
+                    <span>创建课程夹</span></a>
+                </div>
+             </div>  
+             <div class="UI-folder-box">
+                 <div class="UI-folder-title">前端工程师</div>
+                 <div class="UI-folder-img"><img src="{% static 'school/images/profile_sample_image.png' %}" /></div>
+                 <div class="UI-folder-empty"></div>
+                 <div class="UI-folder-empty"></div>
+                 <div class="UI-folder-editor">编辑</div>
+             </div>
+             <div class="UI-folder-box">
+                 <div class="UI-folder-title">前端工程师</div>
+                 <div class="UI-folder-img"><img src="{% static 'school/images/profile_sample_image.png' %}" /></div>
+                 <div class="UI-folder-small"><img src="{% static 'school/images/UI-folder-editor-sample.png' %}" /></div>
+                 <div class="UI-folder-small"><img src="{% static 'school/images/UI-folder-editor-sample2.png' %}" /></div>
+                 <div class="UI-folder-editor"><a href="/school/profileFolderDetails/">编辑</a></div>
+             </div>
+             <div class="UI-folder-box">
+             </div>
+             <div class="UI-folder-box">
+             </div>
+        </div>
+    </div>
+    
+    <a id="gotop">
+        <img src="{% static 'school/images/jump.png' %}">
+    </a>
+</body>
+</html>

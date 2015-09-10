@@ -1,0 +1,133 @@
+.content{
+  width: 1024px;
+  height: auto;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding-top: 58px;
+  background-color: white;
+}
+
+.content-title{
+  text-align: left;
+  font-size: 18px;
+  width: 1024px;
+  padding-top: 18px;
+  padding-left: 35px;
+  float: left;
+}
+
+.content-wrap{
+  width: 1024px;
+  font-size: 14px;
+  float: left;
+  text-align: left;
+  margin-top: 13px;
+  padding-left: 35px;
+}
+.content-top{
+  text-align: left;
+}
+.content-top-out{
+  margin-left: 15px;
+}
+
+.content-top-in{
+  float: left;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 1px solid #2880d2;
+  height: 30px;
+  width: 320px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+.content-top-video{
+  float: left;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 1px solid #2880d2;
+  height: 30px;
+  width: 320px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  margin-left: 80px;
+}
+
+.content-top-in input, .content-top-video input{
+  border: none;
+  width: 228px;
+  height: 28px;
+  padding-left: 10px;
+}
+
+.courseName{
+  float: left;
+  padding-left: 15px;
+  padding-top: 7px;
+  background-color: #2880d2;
+  width: 90px;
+  height: 28px;
+  color: white;
+}
+
+.content-down{
+  float: none;
+}
+
+.content-down-btn{
+  float: none;
+  margin-left: 75px;
+  display:inline-block;
+  border:1px dashed #aaa; 
+  width: 150px;
+  height: 28px;
+  background-color: #e5e5e5;
+}
+.content-down-btn-text{
+  margin-top: 5px;
+  margin-left: 8px;
+  float: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.content-down img{
+  float: left;
+  margin-top: 4px;
+  margin-left: 13px;
+  height: 18px;
+  width: 18px;
+}
+.content-down-btn a{
+  text-decoration: none;
+  color: #535353;
+}
+
+.tureleft{
+  margin-left: 172px;
+}
+
+#saveBtn{
+  background-color: #2880d2;
+  color: white;
+  width: 70px;
+  height: 22px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: 1px solid #2880d2;
+  float: right;
+  margin-bottom: 50px;
+  margin-right: 130px;
+}
+
+.dropBtn{
+  width: 18px;
+  height: 18px;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom:20px;
+  margin-right: 230px;
+}

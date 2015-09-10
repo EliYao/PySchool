@@ -23,9 +23,44 @@ def signup(request):
     
     return render(request, 'school/signup.html')    
 
-
-
+def addCourse(request):
     
+    return render(request, 'school/addCourse.html')
+    
+def addFolder(request):
+    
+    return render(request, 'school/addFolder.html')
+
+   
+def profileCenter(request):
+    
+    return render(request, 'school/profileCenter.html')
+
+def profileFolder(request):
+    
+    return render(request, 'school/profileFolder.html')
+
+def profileFolderDetails(request):
+    
+    return render(request, 'school/profileFolderDetails.html')
+
+def createLesson(request):
+    
+    return render(request, 'school/createLesson.html')
+    
+def createLessonDefine(request):
+    
+    return render(request, 'school/createLessonDefine.html')
+    
+def createLessonVideo(request):
+    
+    return render(request, 'school/createLessonVideo.html')
+    
+def createLessonText(request):
+    
+    return render(request, 'school/createLessonText.html')
+
+   
 def user_login(request):
     if request.method == 'POST':
         email = request.POST.get('email')

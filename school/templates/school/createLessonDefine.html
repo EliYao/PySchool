@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+		<title>私学堂 - 课程内容类型选择</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" href="{% static 'school/images/favicon32.ico' %}" type="image/x-icon" >
+		<link rel="stylesheet" href="{% static 'school/styles/common.css' %}" >
+    <link rel="stylesheet" href="{% static 'school/styles/createLessonDefine.css' %}" >
+		<link href="{% static 'school/styles/font-awesome.css' %}" rel="stylesheet">
+		<link href="{% static 'school/styles/font-awesome.min.css' %}" rel="stylesheet">
+		<script type="text/javascript" src="{% static 'school/scripts/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'school/scripts/common.js' %}"></script>
+</head>
+<body>
+	<div class="header">
+        <div class="logo"><a href="/school/index/"><img src="{% static 'school/images/logo_02.png' %}" /></a></div>
+        <div class="search"><input type="text" placeholder="搜索你想要学习的内容" /><div class="searchIcon fa fa-search fa-2x"></div></div>
+        <div class="profile">
+        <a id="profile" href="#"><img src="{% static 'school/images/userPic.png' %}" /></a>
+        <ul class="UI-nav">
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navUser.png' %}" />&nbsp;&nbsp;个人中心</a></li>
+            <li class="navLine"><img src="{% static 'school/images/navLine.png' %}" /></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navFolder.png' %}" />&nbsp;&nbsp;我的课程夹</a></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navNote.png' %}" />&nbsp;&nbsp;我的笔记</a></li>
+            <li class="navLine"><img src="{% static 'school/images/navLine.png' %}" /></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navSetting.png' %}" />&nbsp;&nbsp;帐号设置</a></li>
+            <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navExit.png' %}" />&nbsp;&nbsp;退出</a></li>
+        </ul>
+        </div>
+	</div>
+	<div id="content">
+        <div class="content-top">
+            <h3>添加课程 - 课程类型选择</h3>
+            <h1>前端工程师的课程</h1>
+        </div>
+        <div class="content-down">
+            <div class="left UI-box">
+                <span>前端工程师</span>
+                <img src="{% static 'school/images/addBtn.png' %}" />
+                <div class="UI-box1">         
+                </div>
+                <div class="UI-box2">
+                </div>
+                <div class="UI-box3">
+                </div>
+            </div>
+            <div class="right UI-box-empty">
+              <div class="down-left UI-button-style01">
+                <a href="/school/createLessonVideo/">
+                  <img src="{% static 'school/images/videoBtn.png' %}" /><span>&nbsp;添加视频</span>
+                </a>
+              </div>
+              <div class="down-left UI-button-style01">
+                <a href="/school/createLessonText/">
+                  <img src="{% static 'school/images/textBtn.png' %}" /><span>&nbsp;添加文本</span>
+                </a>
+              </div>
+            </div>
+        </div>
+    </div>
+	
+        
+     </div>
+    <div class="footer">
+		<p class="footText">© 2015 私学堂 sixuetang.com 版权所有</p>
+	</div>
+    <a id="gotop">
+        <img src="{% static 'school/images/jump.png' %}">
+    </a>
+</body>
+</html>
