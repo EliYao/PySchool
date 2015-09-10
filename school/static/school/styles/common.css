@@ -1,26 +1,26 @@
 *{
 	margin:0 auto;
 	padding:0;
-    box-sizing: border-box;
-    webkit-box-sizing: border-box;
-    moz-box-sizing: border-box;
+  box-sizing: border-box;
+  webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
 }
 body{
     font-size: 12px;
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
-	margin: 0px, auto;
+    margin: 0px, auto;
     background-color: #f2f2f2;
 }
 
 .header {
     border-top: 1px solid #1d6192;
-	width: 1024px;
-	height: 58px;
+    width: 1024px;
+    height: 58px;
     left:0px;
     right:0px;
     padding-top: 6px;
-	margin-right: auto;
+    margin-right: auto;
     margin-left: auto;
     margin-bottom: -3px;
     background-image: url(../images/navBackground.png);
@@ -116,11 +116,16 @@ UI-nav-item-down, UI-nav-item-down img{
 
 
 .footer {
+  position: fixed;
+  bottom: 0px;
 	clear: both;
+  text-align: center;
 	background-color: #e6e6e6;
 	height: 58px;
 	width: 1024px;
 	margin: 0 auto;
+  left:0px;
+  right:0px;
 }
 
 .footText{
