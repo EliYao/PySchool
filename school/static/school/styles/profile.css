@@ -46,3 +46,12 @@
 .profile-nav a{
   text-decoration: none;
 }
+
+.dataShow{
+  margin-top: 15px;
+  height: 91px;
+  overflow: hidden;
+  background-color: #eee;
+  background-image: url(../images/noteBg.png);
+  background-repeat: no-repeat;
+}
