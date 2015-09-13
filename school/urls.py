@@ -14,6 +14,6 @@ urlpatterns = patterns('',
             url(r'^createLessonDefine/$', views.createLessonDefine, name='createLessonDefine'),
             url(r'^createLessonVideo/$', views.createLessonVideo, name='createLessonVideo'),
             url(r'^createLessonText/$', views.createLessonText, name='createLessonText'),
-            url(r'^lessonDetails/$', views.lessonDetails, name='lessonDetails'),
+            url(r'^lessonDetails/$', views.lessonDetails, name='lessonDetails'), 
             )
 			

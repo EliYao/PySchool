@@ -26,8 +26,11 @@
 }
 .content-top{
   text-align: left;
+  float: left;
 }
 .content-top-out{
+  clear: both;
+  text-align: left;
   margin-left: 15px;
 }
 
@@ -104,7 +107,9 @@
   text-decoration: none;
   color: #535353;
 }
-
+.wrap-place{
+  float: none;
+}
 .tureleft{
   margin-left: 172px;
 }
@@ -124,10 +129,21 @@
 }
 
 .dropBtn{
+  float: left;
+  cursor: pointer;
   width: 18px;
   height: 18px;
+  overflow: hidden;
   margin-top: 10px;
   margin-left: 15px;
   margin-bottom:20px;
   margin-right: 230px;
+  background-size: 18px 18px;
+  background-image: url(../images/drop2.png);
+}
+.content-item{
+  display: block;
+  width: 1024px;
+  overflow-y: auto;
+  
 }
