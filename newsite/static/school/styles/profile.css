@@ -1,0 +1,48 @@
+.content-top{
+    height: 283px;
+    background-image: url(../images/profile_bg.png);
+}
+
+.content-down{
+    padding-left: 35px;
+    overflow-y: auto;
+    background-color: #eee;
+}
+
+.center-profile-icon{
+    padding-top: 46px;
+    width: 70px;
+    height: 72px;
+    display: inline-block;
+}
+
+.center-profile-name{
+    padding-top: 20px;
+    display: block;
+    height: 15px;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.profile-nav{
+    margin-top: 90px;
+    width: 475px;
+}
+
+.active a{
+    color: #0b4375;
+}
+
+.unactive a{
+    color: #aaa;
+}
+.profile-nav-item{
+    float: left;
+    height: 38px;
+    width: 85px;
+    margin-left: 55px;
+    font-size: 14px;
+}
+
+.profile-nav a{
+  text-decoration: none;
+}

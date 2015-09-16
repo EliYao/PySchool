@@ -9,6 +9,10 @@ from django.views import generic
 from school.forms import UserForm
 
 
+def ueditor(request):
+    
+	return render(request, 'school/multiEditorWithOneInstance.html')
+
 def index(request):
     
 	return render(request, 'school/index.html')

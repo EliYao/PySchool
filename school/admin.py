@@ -3,7 +3,12 @@
 
 
 from django.contrib import admin
-from school.models import UserProfile, Course, Folder, CourseComments,Lesson
+from school.models import *
+
+class BlogAdmin(admin.ModelAdmin):
+    list_display = ("Name","Content")
+
+
 
 class UserProfileAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -40,3 +45,4 @@ admin.site.register(Lesson, LessonAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Folder, FolderAdmin)
 admin.site.register(CourseComments)
+admin.site.register(Blog, BlogAdmin)

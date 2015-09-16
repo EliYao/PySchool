@@ -1,0 +1,96 @@
+#content{
+    padding-top: 58px;
+    height: 700px;
+    width: 1024px;
+}
+
+.content-top{
+     margin-top: 35px;
+     margin-bottom: 35px;
+     width: 360px;
+     height: 35px;
+}
+
+.content-top-center{
+    border-left: 1px solid #bdbdbd;
+    border-right: 1px solid #bdbdbd;
+    width: 120px;
+}
+
+.content-down{
+    margin-left: 32px;
+    margin-right: 35px;
+    width: 1024px;
+}
+
+.content-top-item{
+    float: left;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 1px solid #bdbdbd;
+    height: 35px;
+    width: 365px;
+}
+.content-top-items{
+    width: 120px;
+    height: 34px;
+    float: left;
+    padding-top: 5px;
+    font-size: 18px;
+    color: #bdbdbd;
+    cursor: pointer;
+}
+.content-top-items-activity{
+    color: #0b4375;
+}
+
+
+.content-down-item{
+    float: left;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    margin-left: 16px;
+}
+
+.content-down-items{
+    float: left;
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-down-items img{
+    width: 220px;
+    height: 220px;
+}
+
+.content-down-items-name{
+    color: white;
+    text-align: left;
+    font-size: 12px;
+    bottom: 5px;
+    left: 5px;
+    position: absolute;
+}
+
+.content-down-items-bg{
+    width: 222px;
+    height:  25px;
+    filter: alpha(opacity=77);
+    -moz-opacity: 0.77;
+    opacity: 0.77;
+    background-image: url(../images/normalBg.jpg);
+    bottom: 0px;
+    position: absolute;
+}
+
+.content-down-name{
+    color: #cbcbcb;
+    padding-top: 5px;
+    padding-left: 3px;
+    float: left;
+    text-align: center;
+}

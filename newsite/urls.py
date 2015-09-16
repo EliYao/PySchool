@@ -8,4 +8,5 @@ urlpatterns = patterns('',
 	url(r'^$', include('school.urls')),
     url(r'^school/', include('school.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^ueditor/', include('DjangoUeditor.urls')),
     ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,9 +1,44 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+
 import datetime
 from django.template.defaultfilters import slugify
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from DjangoUeditor.models import UEditorField
+from DjangoUeditor.commands import *
 
+class myEventHander(UEditorEventHandler):
+    def on_selectionchange(self):
+        return """
+            function getButton(btnName){
+                var items=%(editor)s.ui.toolbars[0].items;
+                for(item in items){
+                    if(items[item].name==btnName){
+                        return items[item];
+                    }
+                }
+            }
+            var btn=getButton("mybtn1");
+            var selRanage=id_Description.selection.getRange()
+            btn.setDisabled(selRanage.startOffset == selRanage.endOffset);    
+    """
+
+
+
+#引入 UEditor
+class Blog(models.Model):
+    Name = models.CharField(u'姓名', max_length=100, blank=True)
+    Content = UEditorField(u'内容', width=600, height=300, toolbars="full", imagePath="images/%(basename)s_%(datetime)s.%(extname)s", filePath="images/%(basename)s_%(datetime)s.%(extname)s",upload_settings={"imageMaxSize":1204000}, settings={}, command=None,event_handler=myEventHander(), blank=True)
+ 
+    
+    
+
+    
+    
+    
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
     picture = models.ImageField(upload_to='profile_image', blank=True)

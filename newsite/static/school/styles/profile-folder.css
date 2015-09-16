@@ -1,0 +1,90 @@
+.content-top{
+    width: 1024px;
+    height: 262px;
+    padding-top: 68px;
+    font-size: 30px;
+    color: #41cfe1;
+    background-image: url(../images/profile-folder-Bg.png);
+}
+
+.content-top-item{
+    margin-top: 30px;
+    float: left;
+    width: 512px;
+    font-size: 18px;
+}
+
+.content-top-item span{
+    background-color: #2880d2;
+    color: white;
+    padding: 3px;
+}
+
+.content-top-number{
+    color: #ffed18;
+}
+
+.right{
+    text-align: right;
+    padding-right: 40px;
+}
+
+.left{
+    text-align: left;
+    padding-left: 40px;
+}
+.content-center{
+    height: 700px;
+    width: 1024px;
+    padding-left: 65px;
+    padding-right: 65px;
+    background-color: #eee;
+}
+.content-list img{
+    width: 28px;
+    height: 28px;
+    float: right;
+}
+.content-list h3{
+    float: left;
+    font-weight: normal;
+    font-size: 24px;
+}
+.content-list-item{
+    clear: both;
+    width: 890px;
+}
+.content-list-items{
+    float: left;
+    width: 220px;
+    height: 220px;
+    position: relative;
+    z-index: 0;
+}
+.content-list-item-name{
+    color: white;
+    text-align: left;
+    font-size: 12px;
+    bottom: 5px;
+    left: 5px;
+    position: absolute;
+}
+.content-list-item-name-bg{
+    width: 222px;
+    height:  25px;
+    filter: alpha(opacity=77);
+    -moz-opacity: 0.77;
+    opacity: 0.77;
+    background-image: url(../images/normalBg.jpg);
+    bottom: 2px;
+    position: absolute;
+}
+.content-down{
+    height: 700px;
+    width: 1024px;
+    padding-top: 10px;
+    padding-left: 65px;
+    padding-right: 65px;
+    background-color: white;
+}
+

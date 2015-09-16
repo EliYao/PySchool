@@ -1,0 +1,36 @@
+.dataShow{
+  height: 91px;
+  padding-left: 250px;
+  padding-top: 15px;
+  padding-left: 420px;
+  background-color: #eee;
+  background-image: url(../images/noteBg.png);
+  background-repeat: no-repeat;
+}
+.content-down-bg{
+  width: 1024px;
+  overflow-y: auto;
+  background-color: white;
+  padding-top: 13px;
+  margin-top: -10px;
+}
+.dataShow-Notes, .dataShow-Days {
+  float: left;
+  font-size: 14px;
+  text-align: left;
+  line-height: 25px;
+  margin-right: 50px;
+}
+
+.resume-to{
+  border: 1px solid black;
+  font-size: 18px;
+  width: 114px;
+  height: 30px;
+  padding: 5px;
+} 
+
+.resume-to a{
+  text-decoration: none;
+  color: black;
+}

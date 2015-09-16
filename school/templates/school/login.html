@@ -24,7 +24,7 @@
 					<p>登录</p><br />
                     <form id="login_form" method="post" action="/school/index/">
                         {% csrf_token %}
-                        <input required class="signInput" type="text" name="email" placeholder="请输入邮箱" /><br />
+                        <input required class="signInput" type="username" name="email" placeholder="请输入用户名" /><br />
                         <input required class="signInput" type="password" name="password" placeholder="请输入密码" />
                         <br />
                         <div class="floatL"><input class="rememberPassword" type="checkbox" /><label for="cr" >记住密码</label>

@@ -1,0 +1,220 @@
+*{
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 12px;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+	margin: 0px, auto;
+    background-color: #f2f2f2;
+}
+.profile{
+	float: right;
+    margin-right: 35px;
+	width: 50px
+}
+.search{
+    margin-top: 5px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border: 1px solid #1d6192;
+    float: left;
+    height: 28px;
+	width: 205px;
+}
+.header {
+    border-top: 1px solid #1d6192;
+	width: 1024px;
+	height: 58px;
+    left:0px;
+    right:0px;
+    padding-top: 6px;
+	margin-right: auto;
+    margin-left: auto;
+    margin-bottom: -3px;
+    background-image: url(../images/navBackground.png);
+    background-repeat: repeat-x;
+    position: fixed;
+    z-index: 100;
+}
+.logo {
+	float: left;
+    margin-left: 35px;
+	width: 385px;
+	text-align: left;
+}
+#content, .header, .footer{
+    background-color: white;
+}
+#content {
+	width: 1024px;
+	height: 749px;
+    padding-top: 58px;
+	margin: 0 auto;
+}
+.mainImgs{
+	width: 1024px;
+	height: 393px;
+}
+.search input{
+    float: left;
+    margin-left: 15px;
+    border: none;
+	width: 160px;
+	height: 25px;
+}
+
+.searchIcon{
+    float:left;
+    color: #0d4476;
+}
+
+#downImg{
+	height: 276px;
+}
+
+#courseRe{
+	width: 1024px;
+    height: 545px;
+    padding-left: 15px;
+	padding-top: 25px;
+	padding-bottom: 60px;
+    background-color: white;
+}
+
+#courseReL{
+	float: left;
+	width: 259px;
+	height: 461px;
+	background-image: url(../images/courseReLBg.png);
+    position: relative;
+}
+#content-Course-Re-Left{
+	padding-top: 25px;
+	margin-left: 30px;
+   text-align: left;
+} 
+
+.index-h1{
+    font-weight: normal;
+}
+
+#content-Course-Re-Left ul, #course-Folder-Re-Left ul{
+	list-style: none;
+	line-height: 30px;
+    color: #707070;
+}
+
+.index-arrow{
+    width: 18px;
+    height: 18px;
+    bottom: 12px;
+    right: 6px;
+    position: absolute;
+    background-image: url(../images/arrow.png);
+    cursor: pointer;
+}
+
+#courseReR{
+	width: 735px;
+	height: 461px;
+	float: left;
+}
+
+.contentReR {
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	width: 223px;
+	height: 221px;
+	background-image: url(../images/reImg1.jpg);
+}
+
+#courseFolderRe{
+	float: left;
+	margin-right: 35px;
+	padding-top: 10px;
+	padding-left: 25px;
+	margin-bottom: 65px;
+	width: 989px;
+	height: 385px;
+	background-color: #f1eeee;
+}
+#course-Folder-ReL{
+    text-align: left;
+	float: left;
+	width: 258px;
+	height: 297px;
+	background-image: url(../images/courseFolderReLBg.png);
+    position: relative;
+}
+#course-Folder-Re-Left{
+    padding-top: 25px;
+    padding-left: 25px;
+	padding-bottom: 3px;
+}
+
+#courseFolderReR{
+	float: right;
+	margin-top: -295px;
+	width: 731px;
+	height: 300px;
+	padding-left: 45.5px;
+}
+
+.course-Folder-Re-item{
+	float: left;
+	width: 221px;
+	height: 300px;
+	margin-right: 7.5px;
+	background-image: url(../images/addCourseBox.png);
+    background-repeat: no-repeat;
+}
+.bgWhite{
+    background-color: white;
+    height: 682.5px;
+}
+#createrFolder{
+	float: left;
+	margin-left: 35px;
+	margin-bottom: 40px;
+	width: 989px;
+	height: 184px;
+	background-image: url(../images/createFolderBg.png);
+    background-color: white;
+}
+
+#createrBtn{
+    position: none;
+	border: 2px solid #0b4375;
+	width: 150px;
+	height: 37px;
+	color: #0b4375;
+	cursor: Pointer;
+	background-color: transparent;
+	margin-top: 70px;
+}
+
+.footer {
+	clear: both;
+	background-color: #e6e6e6;
+	height: 58px;
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.footText{
+	padding-top: 20px;
+}
+
+#gotop{ 
+    display:block;  
+    position:fixed;  
+    bottom:50px;  
+    right:10px; 
+}
