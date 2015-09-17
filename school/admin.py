@@ -1,14 +1,10 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
-
 from django.contrib import admin
 from school.models import *
 
 class BlogAdmin(admin.ModelAdmin):
     list_display = ("Name","Content")
-
-
 
 class UserProfileAdmin(admin.ModelAdmin):
     fieldsets = [
@@ -37,10 +33,7 @@ class FolderAdmin(admin.ModelAdmin):
         ('课程夹名', {'fields':['title']}),
     ] 
     
-    
-
-
-admin.site.register(UserProfile,UserProfileAdmin)
+admin.site.register(UserProfile, UserProfileAdmin)
 admin.site.register(Lesson, LessonAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Folder, FolderAdmin)

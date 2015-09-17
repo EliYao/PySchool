@@ -1,48 +1,15 @@
-*{
-	margin:0;
-	padding:0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body{
-    font-size: 12px;
-    text-align: center;
-    font-family: Helvetica, Arial, sans-serif;
-	margin: 0px, auto;
-    background-color: #f2f2f2;
-}
-.logo {
-	float: left;
-    margin-left: 35px;
-	width: 385px;
-	text-align: left;
-}
 #content, .header, .footer{
     background-color: white;
 }
 #content {
 	width: 1024px;
 	height: 749px;
-    padding-top: 58px;
+  padding-top: 58px;
 	margin: 0 auto;
 }
 .mainImgs{
 	width: 1024px;
 	height: 393px;
-}
-.search input{
-    float: left;
-    margin-left: 15px;
-    border: none;
-	width: 160px;
-	height: 25px;
-}
-
-.searchIcon{
-    float:left;
-    color: #0d4476;
 }
 
 #downImg{
@@ -51,11 +18,11 @@ body{
 
 #courseRe{
 	width: 1024px;
-    height: 545px;
-    padding-left: 15px;
+  height: 545px;
+  padding-left: 15px;
 	padding-top: 25px;
 	padding-bottom: 60px;
-    background-color: white;
+  background-color: white;
 }
 
 #courseReL{
@@ -63,12 +30,12 @@ body{
 	width: 259px;
 	height: 461px;
 	background-image: url(../images/courseReLBg.png);
-    position: relative;
+  position: relative;
 }
 #content-Course-Re-Left{
 	padding-top: 25px;
 	margin-left: 30px;
-   text-align: left;
+  text-align: left;
 } 
 
 .index-h1{

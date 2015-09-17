@@ -1,41 +1,20 @@
+{% extends 'school/base.html' %}
+
 {% load staticfiles %}
-<!DOCTYPE html>
-<html>
-<head>
-		<title>私学堂 - 主页</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-		<link rel="icon" href="{% static 'school/images/favicon32.ico' %}" type="image/x-icon" >
-		<link rel="stylesheet" href="{% static 'school/styles/index.css' %}" >
-    <link rel="stylesheet" href="{% static 'school/styles/common.css' %}" >
-		<link href="{% static 'school/styles/font-awesome.css' %}" rel="stylesheet">
-		<link href="{% static 'school/styles/font-awesome.min.css' %}" rel="stylesheet">
-		<script type="text/javascript" src="{% static 'school/scripts/jquery.js' %}"></script>
-		<script type="text/javascript" src="{% static 'school/scripts/login.js' %}"></script>
-    <script type="text/javascript" src="{% static 'school/scripts/common.js' %}"></script>
-</head>
-<body>
-    <div class="header">
-            <div class="logo">
-              <a href="/school/index/"><img src="{% static 'school/images/logo_02.png' %}" /></a>
-              <div class="header-a"><a href="/school/index/">首页</a></div>
-              <div class="header-a"><a href="/folder/">课程夹</a></div>
-              <div class="header-a"><a href="/course/">课程</a></div>
-            </div>
-            <div class="search"><input type="text" placeholder="搜索你想要学习的内容" /><div class="searchIcon fa fa-search fa-2x"></div></div>
-            <div class="profile"> 
-            <h3>欢迎你，{% firstof user.get_short_name user.get_username %}</h3><a id="profile" href="/school/profileCenter/"><img src="{% static 'school/images/userPic.png' %}" /></a>
-            <ul class="UI-nav">
-                <li class="UI-nav-item-down"><a href="/school/profileCenter/"><img src="{% static 'school/images/navUser.png' %}" />&nbsp;&nbsp;个人中心</a></li>
-                <li class="navLine"><img src="{% static 'school/images/navLine.png' %}" /></li>
-                <li class="UI-nav-item-down"><a href="/school/proflieFolder/"><img src="{% static 'school/images/navFolder.png' %}" />&nbsp;&nbsp;我的课程夹</a></li>
-                <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navNote.png' %}" />&nbsp;&nbsp;我的笔记</a></li>
-                <li class="navLine"><img src="{% static 'school/images/navLine.png' %}" /></li>
-                <li class="UI-nav-item-down"><a href="#"><img src="{% static 'school/images/navSetting.png' %}" />&nbsp;&nbsp;帐号设置</a></li>
-                <li class="UI-nav-item-down"><a href="{% url 'login' %}"><img src="{% static 'school/images/navExit.png' %}" />&nbsp;&nbsp;退出</a></li>
-            </ul>
-            </div>
-    </div>
+
+{% block title %}主页{% endblock %}
+
+
+{% block css_block %}
+  <link rel="stylesheet" href="{% static 'school/styles/index.css' %}" >
+{% endblock %}
+
+{% block js_block %}
+  <script type="text/javascript" src="{% static 'school/scripts/login.js' %}"></script>
+{% endblock %}
+
+
+{% block body_block %}
 	<div id="content">
 		<div class="mainImgs">
 				<img src="{% static 'school/images/indexBig01.png' %}" />
@@ -100,8 +79,8 @@
                 </div>
             </div>
 			<div id="courseFolderReR">
-                <div class="course-Folder-Re-item">
-                </div>
+          <div class="course-Folder-Re-item">
+          </div>
 			</div>
 		</div>
 		<div id="createrFolder">
@@ -111,12 +90,4 @@
       </div>
       </div>
 	</div>
-	<div class="footer">
-		<p class="footText">© 2015 私学堂 sixuetang.com 版权所有</p>
-	</div>
-    <a id="gotop">
- 
-<img src="{% static 'school/images/jump.png' %}">
-</a>
-</body>
-</html>
+{% endblock %}

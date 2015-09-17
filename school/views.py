@@ -9,61 +9,68 @@ from django.core.urlresolvers import reverse
 from django.views import generic
 from school.forms import UserForm, UserProfileForm
 
-
+@login_required
 def ueditor(request):
     
 	return render(request, 'school/multiEditorWithOneInstance.html')
 
+@login_required  
 def index(request):
     
-	return render(request, 'school/index.html')
+    return render(request, 'school/index.html')
     
-    
-def login(request):
-    
-	return render(request, 'school/login.html')
-
+@login_required
 def addCourse(request):
     
     return render(request, 'school/addCourse.html')
-    
+
+@login_required    
 def addFolder(request):
     
     return render(request, 'school/addFolder.html')
 
-   
+@login_required   
 def profileCenter(request):
     
     return render(request, 'school/profileCenter.html')
 
+@login_required
 def profileFolder(request):
     
     return render(request, 'school/profileFolder.html')
 
+@login_required
 def profileFolderDetails(request):
     
     return render(request, 'school/profileFolderDetails.html')
 
+@login_required
 def createLesson(request):
     
     return render(request, 'school/createLesson.html')
-    
+
+@login_required    
 def createLessonDefine(request):
     
     return render(request, 'school/createLessonDefine.html')
-    
+
+@login_required    
 def createLessonVideo(request):
     
     return render(request, 'school/createLessonVideo.html')
-    
+
+@login_required    
 def createLessonText(request):
     
     return render(request, 'school/createLessonText.html')
 
+@login_required
 def lessonDetails(request):
     
     return render(request, 'school/lessonDetails.html')
 
+    
+    
 #用户注册
 def signup(request):
     context = RequestContext(request)
@@ -95,27 +102,38 @@ def signup(request):
                     'profile_form':profile_form, 
                     'registered': registered},context)
     
+#退出
+@login_required
+def user_logout(request):
+    logout(request)
+    
+    
+    return HttpResponseRedirect('/school/')
 
 
 
 #用户登录    
 def user_login(request):
+    context = RequestContext(request)   
+    
     if request.method == 'POST':
-        email = request.POST.get('email')
-        password = request.POST.get('password')
-        user = authenticate(email=email, password=password)
+        username = request.POST['username']
+        password = request.POST['password']
+        
+        user = authenticate(username=username, password=password)
         
         if user:
             if user.is_active:
                 login(request, user)
-                return HttpResponseRedirect('school/index.html')
+                return render_to_response('school/index.html', context)
+
             else:
                 return HttpResponse("帐号不存在！")
         
         else:
-            print "Invaild login details: {0}, {1}".format(email, password)
-            return HttpResponse("邮箱或者密码不正确")
+            print "Invaild login details: {0}, {1}".format(username, password)
+            return HttpResponse("用户名或者密码不正确")
 
     else:
-        return render(request, 'school/index.html', {})
+        return render(request, 'school/login.html', {}, context)
 				

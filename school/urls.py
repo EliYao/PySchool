@@ -1,8 +1,11 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from django.conf.urls import patterns, url
 from school import views 
 
 urlpatterns = patterns('',
-            url(r'^$', views.login, name='login'),
+            url(r'^$', views.user_login, name='login'),
             url(r'^signup/$', views.signup, name='signup'),
             url(r'^index/$', views.index, name='index'),
             url(r'^addCourse/$', views.addCourse, name='addCourse'),
@@ -15,5 +18,7 @@ urlpatterns = patterns('',
             url(r'^createLessonVideo/$', views.createLessonVideo, name='createLessonVideo'),
             url(r'^createLessonText/$', views.createLessonText, name='createLessonText'),
             url(r'^lessonDetails/$', views.lessonDetails, name='lessonDetails'), 
+            url(r'^logout/$', views.user_logout, name='logout'), 
+            url(r'^login/$', views.user_login), 
             )
 			

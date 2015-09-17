@@ -61,12 +61,14 @@ html,body {
 	padding-top: 35px;
 	padding-left: 45px;
 	width: 317px;
-	height: 309px;
+	height: 280px;
 }
 .SignIn p{
-    height: 35px;
-    width: 300px;
+    width: 230px;
     font-size: 18px;
+}
+.helptext{
+  font-size: 14px;
 }
 .rememberPassword{
 	margin-top: 15px;
@@ -105,7 +107,7 @@ html,body {
 	width: 140px;
 	float: left;
 	height: 25px;
-    color: white;
+  color: white;
 	text-align: right;
 }
 
