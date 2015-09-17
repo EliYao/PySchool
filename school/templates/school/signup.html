@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<title>私学堂 - 登录</title>
+		<title>私学堂 - 注册</title>
 		<link rel="stylesheet" href="{% static 'school/styles/login.css' %}"></link>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
@@ -30,18 +30,23 @@
 			<div class="Reg">
 				<div class="SignIn">
 					<h3>注册</h2><br />
-					<input  class="signInput autocomplete" type="text" name="search" placeholder="请输入邮箱" /><br />
-					<input  class="signInput" type="password" name="search" placeholder="请输入密码" />
-					<br />
-					<input class="signInput" type="text" name="search" placeholder="请输入昵称" />
-					<br />
-					<div class="floatL2"><input class="rememberPassword" type="checkbox" /><label for="cr" >我已认真阅读并同意<a href="#">《注册协议》</a></label>
-					</div>
-					<br />
-					<div class="floatL">
-					<input class="signIcon" type="submit" name="submit" value="注册" />
-					</div>
-					<div class="floatR">已有帐号？<a id="signIn" href="{% url 'login' %}">立即登录</a></div>
+                    {% if registered %}
+                    <h3>已经注册成功，是否</h2><a id="signIn" href="{% url 'login' %}">立即登录</a>？
+                    {% else %}
+                    <form id="user_form" method="post" action="{% url 'signup' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ user_form.as_p }}
+                        {{ profile_form.as_p }}
+                        <br />
+                        <div class="floatL2"><input class="rememberPassword" type="checkbox" /><label for="cr" >我已认真阅读并同意<a href="#">《注册协议》</a></label>
+                        </div>
+                        <br />
+                        <div class="floatL">
+                        <input class="signIcon" type="submit" name="submit" value="注册" />
+                        </div>
+                        <div class="floatR">已有帐号？<a id="signIn" href="{% url 'login' %}">立即登录</a></div>
+                    </form>
+                    {% endif %}
 				</div>
 			</div>
 		</div>
@@ -52,36 +57,5 @@
 	<div class="footer">
 		<p class="footText">© 2015 私学堂 sixuetang.com 版权所有</p>
 	</div>
-<script>
-$(function() {
-    var availableTags = [
-      "@163.com",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( ".autocomplete" ).autocomplete({
-      source: availableTags
-    });
-  });
-</script>
 </body>
 </html>

@@ -38,14 +38,19 @@ class Blog(models.Model):
 
     
     
-    
+#定义用户特性    
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
+    email = models.EmailField()
     picture = models.ImageField(upload_to='profile_image', blank=True)
 
     def __unicode__(self):
 		return self.user.username
 
+        
+        
+        
+#定义课程夹特性        
 class Folder(models.Model):
 	title = models.CharField(max_length=128)
 	
@@ -55,7 +60,7 @@ class Folder(models.Model):
         class Meta:
             ordering = ('title',)
                 
-        
+#定义课程特性        
 class Course(models.Model):
     Folder = models.ManyToManyField(Folder)
     topic = models.CharField(max_length=128)
@@ -67,7 +72,9 @@ class Course(models.Model):
         
     class Meta:
         ordering = ('topic',)
-        
+
+
+#定义课时特性        
 class Lesson(models.Model):
     course = models.ForeignKey(Course)
     title = models.CharField(max_length=30)
@@ -81,6 +88,8 @@ class Lesson(models.Model):
     class Meta:
         ordering = ('title',)
 		
+
+#定义课程评论        
 class CourseComments(models.Model):
     course = models.ForeignKey(Course)
     comment = models.CharField(max_length=140)

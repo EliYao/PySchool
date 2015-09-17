@@ -43,10 +43,23 @@ body{
     margin-left: 5px;
     float: left;
 }
+#profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
 .profile{
 	float: right;
     margin-right: 32px;
-	width: 50px
+	width: 150px;
+}
+
+.profile h3{
+    float: left;
+    padding-top: 15px;
+    font-size: 14px;
+    font-weight: normal;
 }
 .search{
     margin-top: 5px;

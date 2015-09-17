@@ -64,6 +64,8 @@ html,body {
 	height: 309px;
 }
 .SignIn p{
+    height: 35px;
+    width: 300px;
     font-size: 18px;
 }
 .rememberPassword{
@@ -80,22 +82,22 @@ html,body {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border: none;
-	margin-top: 10px;
-	width: 70px;
-	height: 25px;
+  margin-top: 10px;
+  width: 70px;
+  height: 25px;
   color: white;
   background-color: #569cdc;
 }
 .floatL{
-	float: left;
-	width: 90px;
-	height: 25px;
+  float: left;
+  width: 90px;
+  height: 25px;
 }
 
 .floatL2{
-	float: left;
-	width: 230px;
-	height: 25px;
+  float: left;
+  width: 230px;
+  height: 25px;
 }
 
 .floatR{
