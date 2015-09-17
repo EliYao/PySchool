@@ -23,3 +23,9 @@ class TestUeditorModelForm(forms.ModelForm):
     class Meta:
       model = Blog
       fields = '__all__'
+
+      
+class CreateFolderForm(forms.ModelForm):
+    class Meta:
+      model = Folder
+      fields = ('title', 'describe')

@@ -15,15 +15,18 @@
             <h1>创建新的课程夹</h1>
         </div>
         <div class="content-down">
+        <form id="login_form" method="post" action="/school/addFolder/">
+          {% csrf_token %}
           <div class="content-down-item">
-            课程夹标题：<textarea class="c1" cols="15" rows="1" placeholder="输入你要的课程夹名"></textarea>
+            课程夹标题：<textarea class="c1"  name="title" cols="15" rows="1" placeholder="输入你要的课程夹名"></textarea>
           </div>
           <div class="content-down-item">
-            课程夹描述：<textarea class="c2" cols="15" rows="2" placeholder="描述你的课程夹内容"></textarea>
+            课程夹描述：<textarea class="c2" name="describe" cols="15" rows="2" placeholder="描述你的课程夹内容"></textarea>
           </div>
           <div class="content-down-item">
-            <a href="/school/addCourse/"><input id="createrBtn" type="submit" value="创建" /></a>
+            <input id="createrBtn" type="submit" value="创建" />
           </div>
+          </form>
         </div>
   </div>
 {% endblock %}

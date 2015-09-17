@@ -1,6 +1,7 @@
 #content{
     padding-top: 58px;
-    height: 700px;
+    overflow-y: auto;
+    padding-bottom: 30px;
     width: 1024px;
 }
 
@@ -40,6 +41,10 @@
     font-size: 18px;
     color: #bdbdbd;
     cursor: pointer;
+}
+
+.content-top-items a{
+    color: #bdbdbd;
 }
 .content-top-items-activity{
     color: #0b4375;

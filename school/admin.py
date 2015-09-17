@@ -31,6 +31,7 @@ class CourseAdmin(admin.ModelAdmin):
 class FolderAdmin(admin.ModelAdmin):
     fieldsets = [
         ('课程夹名', {'fields':['title']}),
+        ('描述', {'fields':['describe']})
     ] 
     
 admin.site.register(UserProfile, UserProfileAdmin)

@@ -34,7 +34,8 @@
     padding-left: 40px;
 }
 .content-center{
-    height: 700px;
+    padding-bottom: 30px;
+    overflow-y: auto;
     width: 1024px;
     padding-left: 65px;
     padding-right: 65px;
@@ -80,7 +81,8 @@
     position: absolute;
 }
 .content-down{
-    height: 700px;
+    overflow-y: auto;
+    padding-bottom: 30px;
     width: 1024px;
     padding-top: 10px;
     padding-left: 65px;

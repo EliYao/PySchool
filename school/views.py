@@ -7,7 +7,26 @@ from django.shortcuts import render, get_object_or_404, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
-from school.forms import UserForm, UserProfileForm
+from school.forms import *
+from school.models import *
+
+@login_required
+def searchResults(request):
+    return render(request, 'school/searchResults.html')
+
+@login_required    
+def searchResults_c(request):
+    return render(request, 'school/searchResults_c.html')
+
+
+
+
+
+
+
+
+
+
 
 @login_required
 def ueditor(request):
@@ -19,25 +38,16 @@ def index(request):
     
     return render(request, 'school/index.html')
     
-@login_required
-def addCourse(request):
-    
-    return render(request, 'school/addCourse.html')
 
-@login_required    
-def addFolder(request):
-    
-    return render(request, 'school/addFolder.html')
+
+
 
 @login_required   
 def profileCenter(request):
     
     return render(request, 'school/profileCenter.html')
 
-@login_required
-def profileFolder(request):
-    
-    return render(request, 'school/profileFolder.html')
+
 
 @login_required
 def profileFolderDetails(request):
@@ -136,4 +146,35 @@ def user_login(request):
 
     else:
         return render(request, 'school/login.html', {}, context)
-				
+
+        
+@login_required
+def profileFolder(request):
+
+
+    
+    return render(request, 'school/profileFolder.html')
+
+#课程添加
+@login_required
+def addCourse(request):
+    title = request.POST['title']         
+    return render(request, 'school/addCourse.html', {}, {'title':title})
+
+#课程夹添加    
+@login_required    
+def addFolder(request):
+    context = RequestContext(request)
+    
+    if request.method == 'POST':
+        title = request.POST['title']
+        describe = request.POST['describe']
+        
+        if title and describe is not None:
+              q = Folder(title=title, describe=describe)
+              q.save()
+              return render(request, 'school/addCourse.html',{}, context)
+        else:
+           return HttpResponse("填写不完全,请重新填写。")
+    else:
+      return render(request, 'school/addFolder.html', {}, context)

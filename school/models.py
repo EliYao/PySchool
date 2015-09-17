@@ -52,13 +52,14 @@ class UserProfile(models.Model):
         
 #定义课程夹特性        
 class Folder(models.Model):
-	title = models.CharField(max_length=128)
+      title = models.CharField(max_length=128)
+      describe = models.TextField()
 	
-	def __unicode__(self):
-		return self.title
+      def __unicode__(self):
+        return self.title
         
-        class Meta:
-            ordering = ('title',)
+      class Meta:
+          ordering = ('title',)
                 
 #定义课程特性        
 class Course(models.Model):
