@@ -147,6 +147,12 @@ def user_login(request):
     else:
         return render(request, 'school/login.html', {}, context)
 
+@login_required
+def lessonStudy(request):
+    return render(request, 'school/lessonStudy.html')
+        
+        
+        
         
 @login_required
 def profileFolder(request):

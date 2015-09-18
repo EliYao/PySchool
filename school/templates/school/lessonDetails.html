@@ -10,7 +10,7 @@
 
 
 {% block js_block %}
-
+<script type="text/javascript" src="{% static 'school/scripts/lessonDetails.js' %}"></script>
 {% endblock %}
 
 {% block body_block %}
@@ -34,7 +34,7 @@
               </div>
               <div class="content-top-right">
                 <img src="{% static 'school/images/add_Box_add.png' %}" />
-                <button>开始学习</button>
+                <button><a href="/school/lessonStudy/">开始学习</a></button>
               </div>
          </div>
         <div class="content-center">
@@ -44,10 +44,13 @@
              </div>
                <h3>课时列表</h3>
                <ul class="content-list-item">
+               
                 <li class="content-list-items">
+                      <a href="/school/lessonStudy/">
                       <img src="{% static 'school/images/Compilers_principles.png' %}" />
                       <div class="content-list-item-name-bg"></div>
                       <div class="content-list-item-name">编译原理</div>
+                      </a>
                 </li>
                 <li class="content-list-items">
                       <img src="{% static 'school/images/Compilers_principles.png' %}" />
@@ -86,7 +89,7 @@
           <h3>
           所有评论（16）
           </h3>
-          <ul>
+          <ul id="comment-warp">
             <li class="comments">
             <img src="{% static 'school/images/Compilers_principles.png' %}" /> 
             <div class="comments-detail ">
@@ -107,7 +110,7 @@
             <p>哈哈哈哈哈哈哈哈哈哈哈哈哈啊哈。哈哈哈哈哈啊哈哈哈哈哈 哈，哈哈哈哈哈。啊哈哈哈哈哈哈哈哈哈哈哈哈，哈哈哈啊哈哈哈啊哈哈哈哈哈哈哈哈哈哈。</p>
             </div>
             </li>
-            <li class="comments comments-click">
+            <li class="comments">
                 <img src="{% static 'school/images/Compilers_principles.png' %}" /> 
                 <div class="comments-detail ">
                 <h4>路人甲</h4>
@@ -140,11 +143,10 @@
         <h3>添加评论</h3>
         <img class="round" src="{% static 'school/images/Compilers_principles.png' %}" /> 
         <div class="add-comment-detail">
-            <h4>路人甲</h4>
-            <textarea>
-            
+            <h4>{% firstof user.get_short_name user.get_username %}</h4>
+            <textarea id="text_submit">
             </textarea>
-            <button>
+            <button id="btn_submit">
             发表
             </button>
         </div>
