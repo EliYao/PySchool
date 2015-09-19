@@ -1,9 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, include, url
 from school import views 
-
 urlpatterns = patterns('',
             url(r'^$', views.user_login, name='login'),
             url(r'^signup/$', views.signup, name='signup'),
@@ -23,5 +22,7 @@ urlpatterns = patterns('',
             url(r'^login/$', views.user_login), 
             url(r'^searchResults/$', views.searchResults, name='searchResults'), 
             url(r'^searchResults_c/$', views.searchResults_c, name='searchResults_c'),
+            url(r'^ueditor/', include('DjangoUeditor.urls')),
+            url(r'^test2/$',views.TestUEditor),
             )
 			

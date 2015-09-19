@@ -18,7 +18,15 @@ def searchResults(request):
 def searchResults_c(request):
     return render(request, 'school/searchResults_c.html')
 
+def TestUEditor(request):
+    if request.method == 'POST':
+        form = TestUEditorForm(request.POST)
+    else:
+        form = TestUEditorForm(
+            initial={'Description': u'测试'}
+        )
 
+    return render_to_response('test2.html', {'form': form})
 
 
 
