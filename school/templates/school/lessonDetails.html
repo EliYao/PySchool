@@ -33,7 +33,7 @@
                 </p>
               </div>
               <div class="content-top-right">
-                <img src="{% static 'school/images/add_Box_add.png' %}" />
+                <img id="add_btn" src="{% static 'school/images/add_Box_add.png' %}" />
                 <button><a href="/school/lessonStudy/">开始学习</a></button>
               </div>
          </div>
@@ -143,13 +143,30 @@
         <h3>添加评论</h3>
         <img class="round" src="{% static 'school/images/Compilers_principles.png' %}" /> 
         <div class="add-comment-detail">
-            <h4>{% firstof user.get_short_name user.get_username %}</h4>
+            <h4 id="UserName">{% firstof user.get_short_name user.get_username %}</h4>
             <textarea id="text_submit">
             </textarea>
             <button id="btn_submit">
             发表
             </button>
         </div>
+        </div>
+        <div id="add_box">
+          <h2>添加到课程夹</h2>
+          课程夹名：<br />
+          <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+         </select>
+         <br />
+         <button class="left">
+            确定
+         </button>
+         <button class="left">
+            取消
+         </button>
         </div>
    </div>
 {% endblock %}

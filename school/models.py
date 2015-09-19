@@ -1,7 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
-
 import datetime
 from django.template.defaultfilters import slugify
 from django.db import models
@@ -9,6 +7,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from DjangoUeditor.models import UEditorField
 from DjangoUeditor.commands import *
+from django.conf import settings
 
 class myEventHander(UEditorEventHandler):
     def on_selectionchange(self):
@@ -42,12 +41,13 @@ class Blog(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
     email = models.EmailField()
-    picture = models.ImageField(upload_to='profile_image', blank=True)
+    picture = models.ImageField(upload_to='profile_image', blank=True, null=True)
 
     def __unicode__(self):
 		return self.user
 
-        
+    def avatar_image(self):
+        return (settings.MEDIA_URL + self.picture.name) if self.picture else None
         
         
 #定义课程夹特性        

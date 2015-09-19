@@ -29,11 +29,13 @@
             <div class="profile"> 
             <h3>欢迎你，{% firstof user.get_short_name user.get_username %}</h3>
             <a id="profile" href="/school/profileCenter/">
-            {% if user.picture == None %}
+                 
+            {% if userprofile.avatar_image %}
+            <img src="{{ userprofile.avatar_image.url }}" />
+            {% else %}
             <img src="{% static 'school/images/userPic.png' %}" />
-            {% else %}                      
-            <img src="{{ user.picture.url }}" />
             {% endif %}
+            
             </a>
             <ul class="UI-nav">
                 <li class="UI-nav-item-down"><a href="/school/profileCenter/"><img src="{% static 'school/images/navUser.png' %}" />&nbsp;&nbsp;个人中心</a></li>
