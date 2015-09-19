@@ -51,6 +51,8 @@ INSTALLED_APPS = (
     'DjangoUeditor',
 )
 
+AUTH_PROFILE_MODULE ='school.UserProfile'
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -81,6 +83,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'newsite.wsgi.application'
+
 
 
 # Database

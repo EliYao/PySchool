@@ -30,11 +30,9 @@
             <h3>欢迎你，{% firstof user.get_short_name user.get_username %}</h3>
             <a id="profile" href="/school/profileCenter/">
                  
-            {% if userprofile.avatar_image %}
-            <img src="{{ userprofile.avatar_image.url }}" />
-            {% else %}
-            <img src="{% static 'school/images/userPic.png' %}" />
-            {% endif %}
+            {% for picture in Pictures %}
+            <img src="{{ picture.url }}" />
+            {% endfor %}
             
             </a>
             <ul class="UI-nav">

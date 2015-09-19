@@ -9,6 +9,8 @@ from django.core.urlresolvers import reverse
 from django.views import generic
 from school.forms import *
 from school.models import *
+from DjangoUeditor.forms import UEditorField 
+from django.contrib.auth.models import User
 
 @login_required
 def searchResults(request):
@@ -17,30 +19,8 @@ def searchResults(request):
 @login_required    
 def searchResults_c(request):
     return render(request, 'school/searchResults_c.html')
-
-def TestUEditor(request):
-    if request.method == 'POST':
-        form = TestUEditorForm(request.POST)
-    else:
-        form = TestUEditorForm(
-            initial={'Description': u'测试'}
-        )
-
-    return render_to_response('test2.html', {'form': form})
-
-
-
-
-
-
-
-
-
-@login_required
-def ueditor(request):
-    
-	return render(request, 'school/multiEditorWithOneInstance.html')
-
+  
+  
 @login_required  
 def index(request):
     
@@ -72,10 +52,12 @@ def createLessonDefine(request):
     
     return render(request, 'school/createLessonDefine.html')
 
+    
+#课程内容制作
 @login_required    
 def createLessonVideo(request):
-    
-    return render(request, 'school/createLessonVideo.html')
+    form = UEditorTestModelForm()
+    return render(request, 'school/createLessonVideo.html',{'form': form})
 
 @login_required    
 def createLessonText(request):
@@ -132,18 +114,17 @@ def user_logout(request):
 
 #用户登录    
 def user_login(request):
+    model = UserProfile
     context = RequestContext(request)   
-    
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         
         user = authenticate(username=username, password=password)
-        
         if user:
             if user.is_active:
                 login(request, user)
-                return render_to_response('school/index.html', context)
+                return render_to_response('school/index.html', RequestContext(request,{}))
 
             else:
                 return HttpResponse("帐号不存在！")

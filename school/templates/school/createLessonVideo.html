@@ -11,6 +11,7 @@
 
 
 {% block js_block %}
+    {{ form.media }}
     <script type="text/javascript" src="{% static 'school/scripts/changeNumber.js' %}"></script>
     <script type="text/javascript" src="{% static 'school/scripts/createLesson.js' %}"></script>
 {% endblock %}
@@ -18,11 +19,13 @@
 {% block body_block %}
 <div class="content">
         <div class="content-title">
+        <form method="post" action="/school/profileFolderDetails/">
         离散数学
         </div>
-        <div class="content-wrap">
+        <div class="content-wrap">      
           <div class="content-top">
           </div>
+          {{ form.as_table }}
           <div class="content-down">
             <div class="content-down-btn tureleft" id="add">
               <a href="#">
@@ -38,7 +41,6 @@
               </a>
             </div>
           </div>
-          <form method="post" action="/school/profileFolderDetails/">
           {% csrf_token %}
           <input id="saveBtn" type="submit" value="保存">
           </form>

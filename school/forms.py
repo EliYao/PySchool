@@ -2,17 +2,10 @@
 # -*- coding: utf-8 -*-
 
 from django import forms
+from DjangoUeditor.forms import UEditorField, UEditorModelForm
 from django.contrib.auth.models import User
 from school.models import *
-  
-class TestUEditorForm(forms.Form):
-    Name = forms.CharField(label=u'姓名')
-    ImagePath = forms.CharField()
-    Description = UEditorField(u"描述", initial="abc", width=1000, height=300)
-    Content = forms.CharField(label=u"内容",
-                              widget=UEditorWidget({"width":600, "height":100, "imagePath":'aa', "filePath":'bb', "toolbars":"full"}))
-
-
+             
   
 class UserForm(forms.ModelForm):
     password = forms.CharField(label='密码', widget=forms.PasswordInput())
@@ -26,15 +19,14 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('picture',)
-
- 
-class TestUeditorModelForm(forms.ModelForm):
-    class Meta:
-      model = Blog
-      fields = '__all__'
-
       
 class CreateFolderForm(forms.ModelForm):
     class Meta:
       model = Folder
       fields = ('title', 'describe')
+
+      
+class UEditorTestModelForm(UEditorModelForm):
+    class Meta:
+        model = Blog
+        fields = '__all__'

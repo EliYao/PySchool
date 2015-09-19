@@ -22,7 +22,5 @@ urlpatterns = patterns('',
             url(r'^login/$', views.user_login), 
             url(r'^searchResults/$', views.searchResults, name='searchResults'), 
             url(r'^searchResults_c/$', views.searchResults_c, name='searchResults_c'),
-            url(r'^ueditor/', include('DjangoUeditor.urls')),
-            url(r'^test2/$',views.TestUEditor),
             )
 			
