@@ -42,10 +42,15 @@ def profileFolderDetails(request):
     
     return render(request, 'school/profileFolderDetails.html')
 
+    
+    
+    
+#创建课程    
 @login_required
 def createLesson(request):
-    
-    return render(request, 'school/createLesson.html')
+    context = RequestContext(request)
+    title = request.POST['title']      
+    return render(request, 'school/createLesson.html',{'title':title},context)
 
 @login_required    
 def createLessonDefine(request):
@@ -153,8 +158,9 @@ def profileFolder(request):
 #课程添加
 @login_required
 def addCourse(request):
+    context = RequestContext(request)
     title = request.POST['title']         
-    return render(request, 'school/addCourse.html', {}, {'title':title})
+    return render(request, 'school/addCourse.html', {'title':title}, context)
 
 #课程夹添加    
 @login_required    
@@ -168,8 +174,8 @@ def addFolder(request):
         if title and describe is not None:
               q = Folder(title=title, describe=describe)
               q.save()
-              return render(request, 'school/addCourse.html',{}, context)
+              return render(request, 'school/addCourse.html',{'title':title}, context)
         else:
-           return HttpResponse("填写不完全,请重新填写。")
+           return render(request, 'school/addFolder.html', {}, context)
     else:
       return render(request, 'school/addFolder.html', {}, context)

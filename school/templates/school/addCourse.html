@@ -11,13 +11,16 @@
 
 {% block body_block %}
 	<div id="content">
+  <form id="login_form" method="post" action="/school/addCourse/">
+  {% csrf_token %}
         <div class="content-top">
             <h3>创建课程夹</h3>
             <h1>{{ title }}的课程</h1>
         </div>
         <div class="content-down">
             <div class="left UI-box">
-                <span>前端工程师</span>
+            <input type="hidden" name="title">{{ title }}</input>
+                <span>{{ title }}</span>
                 <img src="{% static 'school/images/addBtn.png' %}" />
                 <div class="UI-box1">         
                 </div>
@@ -27,7 +30,7 @@
                 </div>
             </div>
             <div class="right UI-box">
-                 <span>前端工程师</span>
+                 <span>{{ title }}</span>
                  <img src="{% static 'school/images/addBtn.png' %}" />
                 <div class="UI-box1">
                 </div>
@@ -46,5 +49,6 @@
         <div class="skip-button">
         <a href="/school/profileCenter/">跳过这一步</a>
         </div>
+        </form>
     </div>
 {% endblock %}
