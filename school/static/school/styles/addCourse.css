@@ -95,7 +95,7 @@
     color: #464344;
   }
  .skip-button{
-    margin-top: 75px;
+    margin-top: 25px;
     margin-right: -379px; 
     padding-top: 8px;
     font-size: 14px;
@@ -107,3 +107,14 @@
     height: 45px;
     z-index: 999px;
  }
+ 
+ .createrBtn{
+   background: none;
+   border: none;
+   cursor: pointer;
+   font-size: 14px;
+ }
+ 
+#getTitle{
+  display: none;
+}

@@ -49,20 +49,59 @@ def profileFolderDetails(request):
 @login_required
 def createLesson(request):
     context = RequestContext(request)
-    title = request.POST['title']      
-    return render(request, 'school/createLesson.html',{'title':title},context)
-
+    title = request.POST['title']
+    return render(request, 'school/createLesson.html', {'title':title}, context)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#课程内容定义    
 @login_required    
 def createLessonDefine(request):
-    
-    return render(request, 'school/createLessonDefine.html')
+    context = RequestContext(request)
+    folderTitle = request.POST['folderTitle']
+    if request.method == 'POST':
+        title = request.POST['title']
+        describe = request.POST['describe']
+        
+        if title and describe is not None:
+              return render(request, 'school/createLessonDefine.html',{'title':title}, context)
+        else:
+           return render(request, 'school/createLesson.html', {'folderTitle':folderTitle}, context)
+    else:
+      return render(request, 'school/createLesson.html', {'folderTitle':folderTitle}, context)
+ 
 
-    
-#课程内容制作
+
+ 
+#课程内容制作视频
 @login_required    
 def createLessonVideo(request):
-    form = UEditorTestModelForm()
-    return render(request, 'school/createLessonVideo.html',{'form': form})
+    context = RequestContext(request)
+    title = request.POST['title']
+    if request.method == 'POST':
+          title = request.POST['title']
+          form = UEditorTestModelForm()
+          return render(request, 'school/createLessonVideo.html',{'title':title,'form': form}, context)
+    else:
+      return render(request, 'school/createLessonDefine.html', {'title':title}, context)
+    
 
 @login_required    
 def createLessonText(request):
@@ -159,7 +198,7 @@ def profileFolder(request):
 @login_required
 def addCourse(request):
     context = RequestContext(request)
-    title = request.POST['title']         
+    title = request.POST['title']
     return render(request, 'school/addCourse.html', {'title':title}, context)
 
 #课程夹添加    

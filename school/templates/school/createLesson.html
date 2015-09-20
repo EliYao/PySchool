@@ -9,21 +9,29 @@
 <link rel="stylesheet" href="{% static 'school/styles/addFolder.css' %}" >
 {% endblock %}
 
+{% block js_block %}
+{% endblock %}
+
 {% block body_block %}
 <div id="content">
         <div class="content-top">
-            <h1>{{ title }}创建新的课程</h1>
+            <h1>{{ title }}{{ folderTitle }}课程夹</h1>
+            <h1>创建新的课程</h1>
         </div>
+        <form id="login_form" method="post" action="/school/createLessonDefine/">
+        {% csrf_token %}
         <div class="content-down">
           <div class="content-down-item">
-            课程标题：<textarea class="c1" cols="15" rows="1" placeholder="输入你要的课程名"></textarea>
+            课程标题：<textarea class="c1" cols="15" rows="1" placeholder="输入你要的课程名" name="title"></textarea>
           </div>
           <div class="content-down-item">
-            课程描述：<textarea class="c2" cols="15" rows="2" placeholder="描述你的课程内容"></textarea>
+            课程描述：<textarea class="c2" cols="15" rows="2" placeholder="描述你的课程内容" name="describe"></textarea>
           </div>
           <div class="content-down-item">
             <a href="/school/createLessonDefine/"><input id="createrBtn" type="submit" value="创建" /></a>
           </div>
+          <input type="text" id="getTitle" value="{{ title }}{{ folderTitle }}" name="folderTitle" />
         </div>
+        </form>
  </div>
 {% endblock %}

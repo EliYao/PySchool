@@ -17,11 +17,13 @@
 	<div id="content">
         <div class="content-top">
             <h3>添加课程 - 课程类型选择</h3>
-            <h1>前端工程师的课程</h1>
+            <h1>{{ title }}的课程</h1>
         </div>
         <div class="content-down">
             <div class="left UI-box">
-                <span>前端工程师</span>
+            <form id="login_form" method="post" action="/school/createLessonVideo/">
+            {% csrf_token %}
+                <span>{{ title }}</span>
                 <img src="{% static 'school/images/addBtn.png' %}" />
                 <div class="UI-box1">         
                 </div>
@@ -33,14 +35,16 @@
             <div class="right UI-box-empty">
               <div class="down-left UI-button-style01">
                 <a href="/school/createLessonVideo/">
-                  <img src="{% static 'school/images/videoBtn.png' %}" /><span>&nbsp;添加视频</span>
+                  <img src="{% static 'school/images/videoBtn.png' %}" /><input class="createrBtn" type="submit" value="&nbsp;添加视频" />
                 </a>
               </div>
               <div class="down-left UI-button-style01">
                 <a href="/school/createLessonText/">
-                  <img src="{% static 'school/images/textBtn.png' %}" /><span>&nbsp;添加文本</span>
+                  <img src="{% static 'school/images/textBtn.png' %}" /><input class="createrBtn" type="submit" value="&nbsp;添加文本" />
                 </a>
               </div>
+              <input id="getTitle" type="text" name="title" value="{{ title }}" />
+              </form>
             </div>
         </div>
     </div>

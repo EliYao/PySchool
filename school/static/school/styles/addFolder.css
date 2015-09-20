@@ -125,3 +125,7 @@ h3{
     height: 21px;
     width: 21px;
  }
+ 
+ #getTitle{
+   display: none;
+ }

@@ -118,3 +118,15 @@
     width: 151px;
     height: 45px;
  }
+ 
+ .createrBtn{
+   border: none;
+   background: none;
+   cursor: pointer;
+   font-size: 18px;
+   color: #464344;
+ }
+ 
+ #getTitle{
+   display: none;
+ }
